@@ -1,7 +1,7 @@
 import { TimerComp } from "@/components/TimerComp";
 const Timer = () => {
   return (
-    <div>
+    <div className="flex justify-center">
       <TimerComp />
     </div>
   );
