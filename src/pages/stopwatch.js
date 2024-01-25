@@ -11,8 +11,11 @@ const Stopwatch = () => {
 
   useEffect(() => {
     let intervalId;
+  //   isRunning
+  //     ? (intervalId = setInterval(() => setTime(time + 1), 10))
+  //     : () => clearInterval(intervalId);
+  // });
     if (isRunning) {
-      // setting time from 0 to 1 every 10 milisecond using javascript setInterval method
       intervalId = setInterval(() => setTime(time + 1), 10);
     }
     return () => clearInterval(intervalId);
@@ -29,7 +32,6 @@ const Stopwatch = () => {
   // console.log(10 / 3);
   // Milliseconds calculation
   const milliseconds = time % 100;
-
   // Method to start and stop timer
 
   const startAndStop = () => {
@@ -39,7 +41,6 @@ const Stopwatch = () => {
   // Method to reset timer back to 0
   const reset = () => {
     setTime(0);
-    setIsRunning(!isRunning);
   };
   return (
     <div className="flex flex-col items-center">
