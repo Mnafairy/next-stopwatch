@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 
 export const TimerComp = ({ initialSeconds }) => {
   console.log(initialSeconds);
+
   const [time, setTime] = useState(initialSeconds * 1);
+
   const [isRunning, setIsRunning] = useState(false);
 
   const startAndStop = () => {
@@ -11,7 +13,7 @@ export const TimerComp = ({ initialSeconds }) => {
   const hours = Math.floor(time / 3600);
   const minutes = Math.floor((time % 3600) / 60);
   const seconds = Math.floor(time % 60);
-  // (hour*60*60+minute*60+second)
+  
   useEffect(() => {
     setTime(initialSeconds);
   }, [initialSeconds]);
